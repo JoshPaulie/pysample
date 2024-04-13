@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "project_name"
+dynamic = ["version"]
+requires-python = ">= 3.12"
+classifiers = ["Programming Language :: Python :: 3.12"]
+
+dependencies = ["rich"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+pysample = "module.main:main"
+
+[tool.hatch.version]
+path = "module/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["module"]

@@ -1,0 +1,8 @@
+# Virtual environment
+.venv
+
+# OSX
+.DS_Store
+
+# Python cache files
+*.pyc
